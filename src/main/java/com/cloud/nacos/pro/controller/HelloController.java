@@ -35,6 +35,11 @@ public class HelloController {
 
         CommUtils.printDataJason(response, restfulResult);
     }
+    @RequestMapping(value = "rest")
+    public String rest(@RequestBody ServiceInfo serviceInfo){
+
+        return "Service1:Welcome " + serviceInfo.getName() + " !";
+    }
 
 
 }
